@@ -21,3 +21,11 @@ export function sendTodoItem(item){
         payload: response
     }
 }
+
+export function getSingleItem(id){
+    const response = axios.get(`${BASE_URL}/todos/${id}${API_KEY}`);
+    return {
+        type: types.VIEW_ITEM,
+        payload: response
+    }
+}
